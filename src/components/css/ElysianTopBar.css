@@ -1,0 +1,12 @@
+.ElysianTopBar{
+    position:fixed;
+    width:100%;
+}
+
+.TopBarShade{
+    background:#000;
+    opacity:.4;
+    height:60px;
+    width:100%;
+    position:fixed;
+}

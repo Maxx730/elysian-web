@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import LorenMap from './resources/images/CanvasMaps/Loren.png'
-
+import { connect } from 'react-redux'
 //Import our created components here.
 import ElysianTopBar from './components/ElysianTopBar'
+import ElysianContentPage from './components/ElysianContentPage'
+import ElysianInformationSlider from './components/ElysianInformationSlider'
 
 //Since we do not want the canvas to constantly rerender,
 //it will be the only HTML element inside of this component.
@@ -18,7 +20,7 @@ class App extends Component {
       },
       Position:{
         angle:0,
-        radius:40,
+        radius:200,
         centerX:-300,
         centerY:-300,
         top:0,
@@ -63,9 +65,24 @@ class App extends Component {
     return (
       <div className="App">
         <ElysianTopBar/>
-        <canvas ref="ElysianCanvas" width={ this.state.Window.width } height={ this.state.Window.height }>
+        <canvas className="ElysianCanvas" ref="ElysianCanvas" width={ this.state.Window.width } height={ this.state.Window.height }>
 
         </canvas>
+        <div className="ElysianInfoSlides">
+          {
+            this.props.Navigation.Current === "INFORMATION" && <ElysianInformationSlider/>
+          }
+        </div>
+        <div className="ElysianContent">
+        {
+          this.props.Navigation.Current === "HOME" && <div>
+            <ElysianContentPage/>
+            <ElysianContentPage/>
+            <ElysianContentPage/>
+            <ElysianContentPage/>
+            </div>
+        }
+        </div>
       </div>
     );
   }
@@ -99,4 +116,16 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    Navigation:state.Navigation
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+   return {
+
+   }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(App);

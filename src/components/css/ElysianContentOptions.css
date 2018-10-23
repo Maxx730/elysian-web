@@ -1,0 +1,26 @@
+.ElysianContentOptions{
+    border-top:solid 1px #DBDBDB;
+    position:relative;
+    float: left;
+    width:100%;
+    overflow-x:hidden;
+}
+
+.ElysianContentOptions ul{
+    list-style:none;
+    margin:0;
+    width:100%;
+    float:left;
+}
+
+.ElysianContentOptions ul li{
+    float: left;
+    width:31%;
+    text-align:center;
+    padding:10px;
+}
+
+.ElysianContentOptions ul li.MiddleButton{
+    border-left:solid 1px #DBDBDB;
+    border-right:solid 1px #DBDBDB;
+}

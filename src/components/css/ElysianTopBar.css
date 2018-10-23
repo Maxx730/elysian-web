@@ -1,12 +1,90 @@
 .ElysianTopBar{
     position:fixed;
     width:100%;
+    z-index:9;
 }
 
 .TopBarShade{
-    background:#000;
-    opacity:.4;
-    height:60px;
     width:100%;
     position:fixed;
+    top:0px;
+    left:0px;
+}
+
+.TopBarContent{
+    padding:10px;
+    padding-bottom:7px;
+}
+
+.TopBarNavigation ul{
+    list-style:none;
+    padding:0px;
+    margin:0;
+}
+
+.TopBarNavigation ul li{
+    float:left;
+    padding:10px;
+    color:#9B9B9B;
+    padding-left:15px;
+    padding-right:15px;
+    border-right:solid 1px #DBDBDB;
+    cursor:pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.TopBarNavigation ul li:hover{
+    color:#BF75B2;
+}
+
+.TopBarNavigation ul li:first-child{
+    border-left:solid 1px #DBDBDB;
+}
+
+.TopBarNavigation ul li:last-child{
+    border-right-color: #945B8A;
+}
+
+.TopBarNavigation{
+    position:absolute;
+    top:0px;
+    right:173px;
+}
+
+.ReserveCopy{
+    background:#BF75B2;
+    color:#FFF;
+    position:absolute;
+    right:0px;
+    top:0px;
+    padding:10px;
+    padding-left:20px;
+    padding-right:20px;
+    cursor:pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.ReserveCopy:hover{
+    background: #945B8A;
+}
+
+.VMUButton{
+    background:#BF75B2;
+    color:#FFF;
+    position:absolute;
+    top:0px;
+    padding:10px;
+    left:320px;
+    padding-left:20px;
+    padding-right:20px;
 }

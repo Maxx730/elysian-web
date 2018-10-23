@@ -1,0 +1,26 @@
+.SlideContent{
+    padding:25px;
+    float:left;
+}
+
+.SlideTitle{
+    padding:15px;
+    padding-top:0px;
+}
+
+.SlideHalf{
+    float:left;
+    width:40%!important;
+    background:red;
+}
+
+.Slide{
+    float:left;
+    width:600px;
+    transition:margin-left 2s;
+}
+
+.Slide:hover{
+    margin-left:-100%;
+    background:red!important;
+}
